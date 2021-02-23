@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="game_jobs_game_jam_game_0"
 config/icon="res://icon.png"
 
+[autoload]
+
+global_water_player_script="*res://src/code/global_scripts/global_water_player_script.gd"
+
 [input]
 
 jump={
@@ -43,6 +47,19 @@ move_left={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
  ]
 }
+move_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="players"
+2d_physics/layer_2="enemyes"
+2d_physics/layer_3="water"
+2d_physics/layer_4="walls"
 
 [rendering]
 
