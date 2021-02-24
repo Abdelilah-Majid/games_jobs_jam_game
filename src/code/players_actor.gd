@@ -2,7 +2,7 @@ extends KinematicBody2D
 class_name Actor
 
 const FLOOR_NORMAL:=Vector2.UP
-export var speed=Vector2(300.0,1000.0)
+export var speed:=Vector2(300.0,1000.0)
 export var water_speed=100.0
 export var gravity:=4000.0
 var _velocity:=Vector2.ZERO
@@ -48,4 +48,6 @@ func calculate_move_velocity(direction:Vector2,speed:Vector2,linear_velocity:Vec
 	
 	return new_velocity
 
+func toggle_small_popup()->void:
+	get_node("small_popup").visible=!get_node("small_popup").visible
 

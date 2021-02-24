@@ -1,6 +1,6 @@
 extends Actor
 
-
+var old_speed:=speed
 var is_walking_on_water_active=false
 
 var olde_gravity=gravity
@@ -18,6 +18,11 @@ func _physics_process(delta: float) -> void:
 			is_walking_on_water_active=!is_walking_on_water_active
 			change_walking_on_wter_state(is_walking_on_water_active)
 	
+#	if is_on_wall():
+#		speed.x=0
+#	elif speed.x==0:
+#		speed=old_speed
+	print(is_on_wall())
 
 
 func change_walking_on_wter_state(is_walking_on_water_active:bool)->void:

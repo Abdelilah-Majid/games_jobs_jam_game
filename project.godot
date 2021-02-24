@@ -21,7 +21,6 @@ _global_script_class_icons={
 [application]
 
 config/name="game_jobs_game_jam_game_0"
-run/main_scene="res://src/levels/test_level.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -66,6 +65,7 @@ l_key={
 2d_physics/layer_2="enemyes"
 2d_physics/layer_3="water"
 2d_physics/layer_4="walls"
+2d_physics/layer_5="boulders"
 
 [rendering]
 

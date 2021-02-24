@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/graphics/popups/small_popup.png" type="Texture" id=1]
+[ext_resource path="res://assets/graphics/normal_maps/popups/small_pupup.png" type="Texture" id=2]
+
+[node name="Sprite" type="Sprite"]
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
