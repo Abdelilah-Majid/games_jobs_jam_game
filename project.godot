@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="game_jobs_game_jam_game_0"
+run/main_scene="res://src/levels/test_level.tscn"
 config/icon="res://icon.png"
 
 [autoload]

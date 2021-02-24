@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/shaders/water.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/actors/water_player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/graphics/tile_example/tile_example.png" type="Texture" id=3]
+[ext_resource path="res://assets/audio/Track_2_possible_Underwater_lvl.ogg" type="AudioStream" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 100, 0, 100, 100, 0, 100 )
@@ -22,6 +23,11 @@ points = PoolVector2Array( 100, 100, 0, 100, 0, 7.62939e-06 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -38,6 +44,11 @@ points = PoolVector2Array( 100, 100, 0, 100, 0, 7.62939e-06 )
 1/tile_mode = 0
 1/occluder_offset = Vector2( 0, 0 )
 1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -54,6 +65,11 @@ points = PoolVector2Array( 100, 100, 0, 100, 0, 7.62939e-06 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
 2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
@@ -66,7 +82,6 @@ points = PoolVector2Array( 100, 100, 0, 100, 0, 7.62939e-06 )
 [node name="Node2D" type="Node2D"]
 
 [node name="shader" parent="." instance=ExtResource( 1 )]
-visible = false
 position = Vector2( 2680, 774 )
 scale = Vector2( 4.48, 1.734 )
 
@@ -80,3 +95,7 @@ tile_data = PoolIntArray( 393215, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0
 
 [node name="water_player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1248, 350 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
