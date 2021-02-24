@@ -1,18 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/graphics/characters/player.png" type="Texture" id=1]
 [ext_resource path="res://assets/graphics/normal_maps/characters/player.png" type="Texture" id=2]
 [ext_resource path="res://src/code/player.gd" type="Script" id=3]
 [ext_resource path="res://src/popups/small_popup.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/popups/text_popup.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 41, 42 )
 
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -32,3 +30,8 @@ smoothing_enabled = true
 [node name="small_popup" parent="." instance=ExtResource( 4 )]
 visible = false
 position = Vector2( 0, -91 )
+
+[node name="text_popup" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 0, -191 )
+scale = Vector2( 0.8, 0.6 )

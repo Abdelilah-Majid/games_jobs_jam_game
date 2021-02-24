@@ -5,5 +5,3 @@ func _ready() -> void:
 
 
 
-func toggle_small_popup()->void:
-	get_node("small_popup").visible=!get_node("small_popup").visible

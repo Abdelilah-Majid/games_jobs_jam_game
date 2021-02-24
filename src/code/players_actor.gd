@@ -48,6 +48,13 @@ func calculate_move_velocity(direction:Vector2,speed:Vector2,linear_velocity:Vec
 	
 	return new_velocity
 
+
+
+
 func toggle_small_popup()->void:
 	get_node("small_popup").visible=!get_node("small_popup").visible
+func toggle_text_popup()->void:
+	get_node("text_popup").visible=!get_node("text_popup").visible
+func change_text_popup_text(text:String):
+	get_node("small_popup/Label").text=text
 

@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/graphics/boulders/boulder0.png" type="Texture" id=1]
+[ext_resource path="res://assets/graphics/normal_maps/boulders/boulder0.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "move_y_slowly"
+length = 15.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.001, 3, 6, 9, 12, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 50 ), Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, 0 ), Vector2( 0, -3.8147e-06 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionPolygon2D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.001, 3, 6, 9, 12, 15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 50 ), Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, 0 ), Vector2( 0, -3.8147e-06 ) ]
+}
+
+[node name="moving_platforms" type="StaticBody2D"]
+position = Vector2( 0, 0.00296211 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 10.5467 )
+texture = ExtResource( 1 )
+normal_map = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0, 10.5467 )
+polygon = PoolVector2Array( -150, -150, -150, 150, 150, 150, 150, -150 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "move_y_slowly"
+anims/move_y_slowly = SubResource( 1 )
