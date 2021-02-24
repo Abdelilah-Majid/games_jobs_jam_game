@@ -1,7 +1,7 @@
 extends Actor
 
 
-
+var is_walking_on_water_active=false
 
 var olde_gravity=gravity
 func _physics_process(delta: float) -> void:
@@ -13,7 +13,16 @@ func _physics_process(delta: float) -> void:
 		is_water_player_is_in_water=false
 	_get_y_direction()
 	
-	print(y_direction)
+	if !global_water_player_script.is_in_water:
+		if Input.is_action_just_pressed("l_key"):
+			is_walking_on_water_active=!is_walking_on_water_active
+			change_walking_on_wter_state(is_walking_on_water_active)
+	
+
+
+func change_walking_on_wter_state(is_walking_on_water_active:bool)->void:
+	set_collision_mask_bit(2,is_walking_on_water_active)
+	pass
 
 
 func _get_y_direction()->void:
