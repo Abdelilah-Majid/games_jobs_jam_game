@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ambiente_Scene_1.wav-dab3c147d9d6c02f2df88c4947c04bf0.sample"
+
+[deps]
+
+source_file="res://assets/audio/Sound Design/Enviroment/Ambiente_Scene_1.wav"
+dest_files=[ "res://.import/Ambiente_Scene_1.wav-dab3c147d9d6c02f2df88c4947c04bf0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Track_2_possible_Underwater_lvl.ogg-8c3fcff765dd156479da055c4e6ca2c8.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/Soundtrack/Track_2_possible_Underwater_lvl.ogg"
+dest_files=[ "res://.import/Track_2_possible_Underwater_lvl.ogg-8c3fcff765dd156479da055c4e6ca2c8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
