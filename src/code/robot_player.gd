@@ -2,7 +2,7 @@ extends Actor
 
 
 
-
+var old_speed:=speed
 
 
 func _physics_process(delta):
@@ -12,3 +12,24 @@ func _physics_process(delta):
 		print()
 		if collision.collider.get_collision_layer_bit(4)==true:
 			collision.collider.push(get_direction().x)
+		
+		
+	if global_players_script.current_player=="water":
+		speed=Vector2(0.0,0.0)
+	if global_players_script.current_player=="robot":
+		speed=old_speed
+	check_for_change_player_action()
+	
+
+
+func check_for_change_player_action()->String:
+	if Input.is_action_just_pressed("k_key"):
+		if global_players_script.current_player=="robot":
+			global_players_script.current_player="water"
+			print(global_players_script.current_player)
+			return "a"
+		if global_players_script.current_player=="water":
+			global_players_script.current_player="robot"
+			print(global_players_script.current_player)
+			return "b"
+	return "c"

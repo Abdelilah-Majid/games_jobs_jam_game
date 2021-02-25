@@ -1,7 +1,13 @@
 extends Actor
 
+
+
+
+
 var old_speed:=speed
 var is_walking_on_water_active=false
+
+
 
 var olde_gravity=gravity
 func _physics_process(delta: float) -> void:
@@ -18,12 +24,14 @@ func _physics_process(delta: float) -> void:
 			is_walking_on_water_active=!is_walking_on_water_active
 			change_walking_on_wter_state(is_walking_on_water_active)
 	
-#	if is_on_wall():
-#		speed.x=0
-#	elif speed.x==0:
-#		speed=old_speed
-	print(is_on_wall())
-
+	
+	
+	if global_players_script.current_player=="robot":
+		speed=Vector2(0.0,0.0)
+		y_direction=0
+	if global_players_script.current_player=="water":
+		speed=old_speed
+	
 
 func change_walking_on_wter_state(is_walking_on_water_active:bool)->void:
 	set_collision_mask_bit(2,is_walking_on_water_active)

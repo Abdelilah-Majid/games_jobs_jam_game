@@ -3,6 +3,7 @@ class_name Actor
 
 const FLOOR_NORMAL:=Vector2.UP
 export var speed:=Vector2(300.0,1000.0)
+var direction:=Vector2()
 export var water_speed=100.0
 export var gravity:=4000.0
 var _velocity:=Vector2.ZERO
@@ -12,9 +13,12 @@ var is_water_player_is_in_water=false
 func _physics_process(delta: float) -> void:
 	
 	var is_jump_interrupted:=Input.is_action_just_released("jump") and _velocity.y < 0.0
-	var direction:=get_direction()
+	direction=get_direction()
 	_velocity=calculate_move_velocity(direction,speed,_velocity,is_jump_interrupted)
 	_velocity=move_and_slide(_velocity, FLOOR_NORMAL)
+	
+	
+	
 	return
 
 
@@ -47,7 +51,6 @@ func calculate_move_velocity(direction:Vector2,speed:Vector2,linear_velocity:Vec
 		new_velocity.y=0.0
 	
 	return new_velocity
-
 
 
 
