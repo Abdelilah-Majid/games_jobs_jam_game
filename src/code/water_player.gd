@@ -2,10 +2,14 @@ extends Actor
 
 
 
-
+export(String, FILE) var jump_sound_file=""
+export(String, FILE) var walk_sound_file:=""
+export(String, FILE) var walk_on_water_sound_file:=""
+export(String, FILE) var injured_sound_file:=""
 
 var old_speed:=speed
-var is_walking_on_water_active=false
+var is_walking_on_water_active:=false
+
 
 
 
@@ -27,11 +31,15 @@ func _physics_process(delta: float) -> void:
 	
 	
 	if global_players_script.current_player=="robot":
+		get_node("Camera2D").current=false
 		speed=Vector2(0.0,0.0)
 		y_direction=0
 	if global_players_script.current_player=="water":
+		get_node("Camera2D").current=true
 		speed=old_speed
 	
+	
+	check_play_sound()
 
 func change_walking_on_wter_state(is_walking_on_water_active:bool)->void:
 	set_collision_mask_bit(2,is_walking_on_water_active)
@@ -46,3 +54,27 @@ func _get_y_direction()->void:
 	else:
 		y_direction=0
 	
+
+
+func check_play_sound()->void:
+	
+	if is_on_floor() && Input.is_action_just_pressed("jump") && global_players_script.current_player=="water" && !global_water_player_script.is_in_water:
+		get_node("jump_sound_player").play()
+		
+	if global_water_player_script.is_player_walking_on_water && !get_node("walk_on_water_sound_player3").is_playing() && direction.x!=0 && is_walking_on_water_active && global_players_script.current_player=="water":
+		get_node("walk_on_water_sound_player3").play()
+	if get_node("walk_on_water_sound_player3").is_playing() && direction.x==0:
+		get_node("walk_on_water_sound_player3").stop()
+	if get_node("walk_on_water_sound_player3").is_playing() && !global_water_player_script.is_player_walking_on_water:
+		get_node("walk_on_water_sound_player3").stop()
+	
+	if is_on_floor() && !get_node("walk_sound_player2").is_playing() && global_players_script.current_player=="water" && ! global_water_player_script.is_player_walking_on_water && direction.x!=0:
+		get_node("walk_sound_player2").play()
+	if direction.x==0:
+		get_node("walk_sound_player2").stop()
+	if global_water_player_script.is_in_water:
+		get_node("walk_sound_player2").stop()
+	if global_water_player_script.is_player_walking_on_water:
+		get_node("walk_sound_player2").stop()
+	
+

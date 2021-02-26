@@ -1,4 +1,4 @@
 extends Node
 
 var is_in_water:=false
-var water_that_we_are_colliding_with_position:=Vector2()
+var is_player_walking_on_water:=false

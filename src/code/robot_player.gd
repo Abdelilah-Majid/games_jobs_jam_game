@@ -15,9 +15,12 @@ func _physics_process(delta):
 		
 		
 	if global_players_script.current_player=="water":
+		get_node("Camera2D").current=false
 		speed=Vector2(0.0,0.0)
 	if global_players_script.current_player=="robot":
+		get_node("Camera2D").current=true
 		speed=old_speed
+
 	check_for_change_player_action()
 	
 
