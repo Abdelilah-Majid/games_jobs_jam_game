@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Waterfall.ogg-a870263a30a28ce06ac7f9766cfadbe0.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/Sound Design/Enviroment/Waterfall.ogg"
+dest_files=[ "res://.import/Waterfall.ogg-a870263a30a28ce06ac7f9766cfadbe0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

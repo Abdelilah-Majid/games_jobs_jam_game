@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Hurt_04.ogg-e4ee5755c4c48868287d2a86cb9d432f.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/Sound Design/Atlea/Atlea_Injured/Hurt_04.ogg"
+dest_files=[ "res://.import/Hurt_04.ogg-e4ee5755c4c48868287d2a86cb9d432f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
