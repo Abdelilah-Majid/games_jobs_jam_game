@@ -2,15 +2,18 @@ extends Actor
 
 
 
-export(String, FILE) var jump_sound_file=""
-export(String, FILE) var walk_sound_file:=""
-export(String, FILE) var walk_on_water_sound_file:=""
-export(String, FILE) var injured_sound_file:=""
+
 
 var old_speed:=speed
 var is_walking_on_water_active:=false
 
 
+var jump_sounds_arr=[
+	preload("res://assets/audio/Sound Design/Atlea/Atlea Jump/Jump_01.ogg"),
+	preload("res://assets/audio/Sound Design/Atlea/Atlea Jump/Jump_02.ogg"),
+	preload("res://assets/audio/Sound Design/Atlea/Atlea Jump/Jump_03.ogg")
+	]
+var jump_sound_arr_index=0
 
 
 var olde_gravity=gravity
@@ -60,7 +63,13 @@ func check_play_sound()->void:
 	
 	if is_on_floor() && Input.is_action_just_pressed("jump") && global_players_script.current_player=="water" && !global_water_player_script.is_in_water:
 		get_node("jump_sound_player").play()
+		get_node("jump_sound_player").stream=jump_sounds_arr[jump_sound_arr_index]
 		
+		jump_sound_arr_index+=1
+		if jump_sound_arr_index==3:
+			jump_sound_arr_index=0
+	
+	
 	if global_water_player_script.is_player_walking_on_water && !get_node("walk_on_water_sound_player3").is_playing() && direction.x!=0 && is_walking_on_water_active && global_players_script.current_player=="water":
 		get_node("walk_on_water_sound_player3").play()
 	if get_node("walk_on_water_sound_player3").is_playing() && direction.x==0:
@@ -77,4 +86,17 @@ func check_play_sound()->void:
 	if global_water_player_script.is_player_walking_on_water:
 		get_node("walk_sound_player2").stop()
 	
+
+
+
+
+func show_small_popup()->void:
+	get_node("small_popup/AnimationPlayer").play("show")
+func hide_small_popup()->void:
+	get_node("small_popup/AnimationPlayer").play("hide")
+
+func toggle_text_popup()->void:
+	get_node("text_popup").visible=!get_node("text_popup").visible
+func change_text_popup_text(text:String):
+	get_node("small_popup/Label").text=text
 

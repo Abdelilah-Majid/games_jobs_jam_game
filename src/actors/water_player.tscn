@@ -9,7 +9,6 @@
 [node name="Atlea" instance=ExtResource( 1 )]
 collision_mask = 10
 script = ExtResource( 2 )
-jump_sound_file = "res://assets/audio/Sound Design/Atlea/Atlea Jump/Jump_1.wav"
 
 [node name="jump_sound_player" type="AudioStreamPlayer2D" parent="." index="5"]
 stream = ExtResource( 4 )
