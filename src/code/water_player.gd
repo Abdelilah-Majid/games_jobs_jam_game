@@ -41,6 +41,10 @@ func _physics_process(delta: float) -> void:
 		get_node("Camera2D").current=true
 		speed=old_speed
 	
+	if global_water_player_script.is_water_player_collide_with_water_button && global_players_script.current_player=="water":
+		if Input.is_action_just_pressed("space_key"):
+			global_water_player_script.is_water_button_activated=!global_water_player_script.is_water_button_activated
+	
 	
 	check_play_sound()
 
