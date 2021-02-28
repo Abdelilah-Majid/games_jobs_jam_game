@@ -1,13 +1,25 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/Characters/AtleaBodyParts.png" type="Texture" id=1]
+[ext_resource path="res://src/Animation/Atlea/AtleaIdle.tres" type="Animation" id=2]
+[ext_resource path="res://src/Animation/Atlea/AtleaRun.tres" type="Animation" id=3]
+[ext_resource path="res://src/Animation/Atlea/AtleaJump.tres" type="Animation" id=4]
+[ext_resource path="res://src/Animation/Atlea/AtleaLand.tres" type="Animation" id=5]
+[ext_resource path="res://src/Animation/Atlea/AtleaDeath.tres" type="Animation" id=6]
+[ext_resource path="res://src/Animation/Atlea/AtleaButtonPress.tres" type="Animation" id=7]
+[ext_resource path="res://src/Animation/Atlea/AtleaSwimmingIdle.tres" type="Animation" id=8]
+[ext_resource path="res://src/Animation/Atlea/AtleaSwimming.tres" type="Animation" id=9]
+[ext_resource path="res://src/Animation/Atlea/AtleaSwimmingButtonPress.tres" type="Animation" id=10]
 
 [node name="Atlea" type="Node2D"]
 
 [node name="Polygons" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Cape" type="Polygon2D" parent="Polygons"]
-position = Vector2( 1069.15, 62.2254 )
+position = Vector2( 1073.15, 62.2254 )
 texture = ExtResource( 1 )
 skeleton = NodePath("../../AtleaSkeleton")
 polygon = PoolVector2Array( 230.189, 562.264, 122.642, 681.132, 90.566, 826.415, 109.434, 979.245, 188.679, 1083.02, 366.038, 1115.09, 469.811, 1030.19, 535.849, 939.623, 543.396, 813.208, 450.943, 603.774 )
@@ -103,10 +115,10 @@ skeleton = NodePath("../../AtleaSkeleton")
 polygon = PoolVector2Array( 754.717, 735.849, 652.83, 1113.21, 794.34, 1137.74, 981.132, 1135.85, 1075.47, 1103.77, 996.226, 720.755, 930.189, 690.566, 815.094, 698.113 )
 uv = PoolVector2Array( 754.717, 735.849, 652.83, 1113.21, 794.34, 1137.74, 981.132, 1135.85, 1075.47, 1103.77, 996.226, 720.755, 930.189, 690.566, 815.094, 698.113 )
 polygons = [ PoolIntArray( 7, 0, 5, 6 ), PoolIntArray( 0, 1, 4, 5 ), PoolIntArray( 1, 2, 3, 4 ) ]
-bones = [ NodePath("Skirt"), PoolRealArray( 1, 0, 1, 1, 1, 1, 1, 1 ), NodePath("Skirt/Torso"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/Neck"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/Neck/Head"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/Neck/Cape"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmR/ForeArmR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmR/ForeArmR/HandR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmL/ForeArmL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmL/ForeArmL/HandL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighR/ShinR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighR/ShinR/FootR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighL/ShinL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighL/ShinL/FootL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+bones = [ NodePath("Skirt"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("Skirt/Torso"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/Neck"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/Neck/Head"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/Neck/Cape"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmR/ForeArmR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmR/ForeArmR/HandR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmL/ForeArmL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmL/ForeArmL/HandL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighR/ShinR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighR/ShinR/FootR"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighL/ShinL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Skirt/ThighL/ShinL/FootL"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 
 [node name="Torso" type="Polygon2D" parent="Polygons"]
-position = Vector2( 1091.77, 503.46 )
+position = Vector2( 1086.73, 503.46 )
 texture = ExtResource( 1 )
 skeleton = NodePath("../../AtleaSkeleton")
 polygon = PoolVector2Array( 175.472, 156.604, 156.604, 452.83, 233.962, 494.34, 422.642, 496.226, 530.189, 441.509, 456.604, 160.377, 367.925, 122.642, 250.943, 126.415 )
@@ -142,7 +154,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 bones = [ NodePath("Skirt"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/Torso"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/Torso/Neck"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/Torso/Neck/Head"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/Torso/Neck/Cape"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmR"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmR/ForeArmR"), PoolRealArray( 1, 1, 1, 1 ), NodePath("Skirt/Torso/ArmR/ForeArmR/HandR"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmL"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmL/ForeArmL"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/Torso/ArmL/ForeArmL/HandL"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/ThighR"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/ThighR/ShinR"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/ThighR/ShinR/FootR"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/ThighL"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/ThighL/ShinL"), PoolRealArray( 0, 0, 0, 0 ), NodePath("Skirt/ThighL/ShinL/FootL"), PoolRealArray( 0, 0, 0, 0 ) ]
 
 [node name="ArmR" type="Polygon2D" parent="Polygons"]
-position = Vector2( 379.009, -545.887 )
+position = Vector2( 379.009, -550.927 )
 texture = ExtResource( 1 )
 skeleton = NodePath("../../AtleaSkeleton")
 polygon = PoolVector2Array( 890.625, 1190.63, 887.5, 1550, 1059.38, 1537.5, 1040.63, 1187.5 )
@@ -180,58 +192,76 @@ rest = Transform2D( 0.429676, -0.902983, 0.902983, 0.429676, -0.000244141, -90.7
 default_length = 172.0
 
 [node name="ArmR" type="Bone2D" parent="AtleaSkeleton/Skirt/Torso"]
-position = Vector2( -61.4026, -232.262 )
+position = Vector2( -40.5865, -236.634 )
+rotation = -1.17198
 rest = Transform2D( 1, 0, 0, 1, -61.4026, -232.262 )
 
 [node name="ForeArmR" type="Bone2D" parent="AtleaSkeleton/Skirt/Torso/ArmR"]
-position = Vector2( -10.6787, 240.271 )
+position = Vector2( -12.1051, 236.534 )
+rotation = -0.27782
 rest = Transform2D( 1, 0, 0, 1, -10.6787, 240.271 )
 
 [node name="HandR" type="Bone2D" parent="AtleaSkeleton/Skirt/Torso/ArmR/ForeArmR"]
 position = Vector2( -2.66968, 184.208 )
-rotation = 1.8222
+rotation = 0.148844
 rest = Transform2D( -0.248763, 0.968565, -0.968565, -0.248763, -2.66968, 184.208 )
 default_length = 106.0
 
 [node name="ArmL" type="Bone2D" parent="AtleaSkeleton/Skirt/Torso"]
-position = Vector2( 29.3663, -221.583 )
-rotation = -0.0397942
+position = Vector2( -23.6168, -212.839 )
+rotation = -1.28378
 rest = Transform2D( 0.999208, -0.0397837, 0.0397837, 0.999208, 29.3663, -221.583 )
 
 [node name="ForeArmL" type="Bone2D" parent="AtleaSkeleton/Skirt/Torso/ArmL"]
 position = Vector2( -10.6787, 240.271 )
+rotation = -0.596611
 rest = Transform2D( 1, 0, 0, 1, -10.6787, 240.271 )
 
 [node name="HandL" type="Bone2D" parent="AtleaSkeleton/Skirt/Torso/ArmL/ForeArmL"]
-position = Vector2( -2.66968, 184.208 )
-rotation = 1.8222
+position = Vector2( -0.839172, 180.652 )
+rotation = 0.334494
 rest = Transform2D( -0.248763, 0.968565, -0.968565, -0.248763, -2.66968, 184.208 )
 default_length = 106.0
 
 [node name="ThighR" type="Bone2D" parent="AtleaSkeleton/Skirt"]
-position = Vector2( -88.0994, 112.127 )
+position = Vector2( -35.0173, 83.5859 )
+rotation = -0.353665
 rest = Transform2D( 1, 0, 0, 1, -88.0994, 112.127 )
 
 [node name="ShinR" type="Bone2D" parent="AtleaSkeleton/Skirt/ThighR"]
-position = Vector2( 58.7329, 339.049 )
+position = Vector2( 68.093, 340.752 )
+rotation = 0.123289
 rest = Transform2D( 1, 0, 0, 1, 58.7329, 339.049 )
 
 [node name="FootR" type="Bone2D" parent="AtleaSkeleton/Skirt/ThighR/ShinR"]
 position = Vector2( -77.4207, 384.434 )
-rotation = 0.590656
+rotation = 2.02844
 rest = Transform2D( 0.830575, 0.556906, -0.556906, 0.830575, -77.4207, 384.434 )
 default_length = 106.0
 
 [node name="ThighL" type="Bone2D" parent="AtleaSkeleton/Skirt"]
-position = Vector2( 8.00903, 106.787 )
+position = Vector2( 3.2522, 106.787 )
+rotation = 0.0888729
 rest = Transform2D( 1, 0, 0, 1, 8.00903, 106.787 )
 
 [node name="ShinL" type="Bone2D" parent="AtleaSkeleton/Skirt/ThighL"]
 position = Vector2( 53.3936, 333.71 )
+rotation = 0.17038
 rest = Transform2D( 1, 0, 0, 1, 53.3936, 333.71 )
 
 [node name="FootL" type="Bone2D" parent="AtleaSkeleton/Skirt/ThighL/ShinL"]
-position = Vector2( -16.0178, 395.113 )
-rotation = 0.452532
+position = Vector2( -19.9795, 394.561 )
+rotation = 1.90248
 rest = Transform2D( 0.899343, 0.437244, -0.437244, 0.899343, -16.0178, 395.113 )
 default_length = 106.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/ButtonPress = ExtResource( 7 )
+anims/Death = ExtResource( 6 )
+anims/Idle = ExtResource( 2 )
+anims/Jump = ExtResource( 4 )
+anims/Land = ExtResource( 5 )
+anims/Run = ExtResource( 3 )
+anims/Swimming = ExtResource( 9 )
+anims/SwimmingButtonPress = ExtResource( 10 )
+anims/SwimmingIdle = ExtResource( 8 )
