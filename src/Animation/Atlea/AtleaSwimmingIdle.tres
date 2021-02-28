@@ -1,0 +1,389 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "SwimmingIdle"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AtleaSkeleton/Skirt/ThighR/ShinR:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 58.7329, 339.049 ), Vector2( 58.7329, 339.049 ), Vector2( 58.7329, 339.049 ), Vector2( 58.7329, 339.049 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AtleaSkeleton/Skirt/ThighR/ShinR:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -12.8025, -12.8025, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AtleaSkeleton/Skirt/ThighL/ShinL:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 53.3936, 333.71 ), Vector2( 53.3936, 333.71 ), Vector2( 53.3936, 333.71 ), Vector2( 53.3936, 333.71 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AtleaSkeleton/Skirt/ThighL/ShinL:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -4.93558, -4.93558, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AtleaSkeleton/Skirt/ThighL/ShinL/FootL:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -19.9795, 394.561 ), Vector2( -19.9795, 394.561 ), Vector2( -19.9795, 394.561 ), Vector2( -19.9795, 394.561 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AtleaSkeleton/Skirt/ThighL/ShinL/FootL:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 109.004, 109.004, 109.004, 109.004 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmL/ForeArmL:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -10.6787, 240.271 ), Vector2( -10.6787, 240.271 ), Vector2( -10.6787, 240.271 ), Vector2( -10.6787, 240.271 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmL/ForeArmL:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -34.1833, -12.2104, 32.0593, -34.1833 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("AtleaSkeleton/Skirt/Torso:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 18.6877, -98.7782 ), Vector2( 18.6877, -98.7782 ), Vector2( 18.6877, -98.7782 ), Vector2( 18.6877, -98.7782 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("AtleaSkeleton/Skirt/Torso:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("AtleaSkeleton/Skirt/Torso/Neck:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -48.0542, -290.995 ), Vector2( -48.0542, -290.995 ), Vector2( -48.0542, -290.995 ), Vector2( -48.0542, -290.995 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("AtleaSkeleton/Skirt/Torso/Neck:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmR/ForeArmR/HandR:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2.66968, 184.208 ), Vector2( -2.66968, 184.208 ), Vector2( -2.66968, 184.208 ), Vector2( -2.66968, 184.208 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmR/ForeArmR/HandR:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 79.9437, 96.6503, 96.6503, 79.9437 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmL/ForeArmL/HandL:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.839172, 180.652 ), Vector2( -0.839172, 180.652 ), Vector2( -0.839172, 180.652 ), Vector2( -0.839172, 180.652 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmL/ForeArmL/HandL:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 76.1285, 98.8398, 98.8398, 76.1285 ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmR/ForeArmR:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -12.1051, 236.534 ), Vector2( -12.1051, 236.534 ), Vector2( -12.1051, 236.534 ), Vector2( -12.1051, 236.534 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmR/ForeArmR:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -15.9179, 17.567, -23.9009, -15.9179 ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("AtleaSkeleton/Skirt:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1398.91, 1051.85 ), Vector2( 1398.91, 1051.85 ), Vector2( 1398.91, 1051.85 ), Vector2( 1398.91, 1051.85 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("AtleaSkeleton/Skirt:rotation_degrees")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, 0.0 ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("AtleaSkeleton/Skirt/ThighL:position")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8.00903, 106.787 ), Vector2( 8.00903, 106.787 ), Vector2( 8.00903, 106.787 ), Vector2( 8.00903, 106.787 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("AtleaSkeleton/Skirt/ThighL:rotation_degrees")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.76645, -15.5302, 32.5928, 1.76645 ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("AtleaSkeleton/Skirt/Torso/Neck/Head:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -0.000244141, -90.769 ), Vector2( -0.000244141, -90.769 ), Vector2( -0.000244141, -90.769 ), Vector2( -0.000244141, -90.769 ), Vector2( -0.000244141, -90.769 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("AtleaSkeleton/Skirt/Torso/Neck/Head:rotation_degrees")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -64.5529, -89.6771, -72.3862, -89.6771, -64.5529 ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmL:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 29.3663, -226.34 ), Vector2( 29.3663, -226.34 ), Vector2( 29.3663, -226.34 ), Vector2( 29.3663, -226.34 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmL:rotation_degrees")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -69.1752, -100.291, -28.864, -69.1752 ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("AtleaSkeleton/Skirt/ThighR:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -35.0173, 83.5859 ), Vector2( -35.0173, 83.5859 ), Vector2( -35.0173, 83.5859 ), Vector2( -35.0173, 83.5859 ) ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("AtleaSkeleton/Skirt/ThighR:rotation_degrees")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 2.38687, 28.2113, -22.2608, 2.38687 ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmR:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -61.4026, -232.262 ), Vector2( -61.4026, -232.262 ), Vector2( -61.4026, -232.262 ), Vector2( -61.4026, -232.262 ) ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("AtleaSkeleton/Skirt/Torso/ArmR:rotation_degrees")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 73.0584, 90.4858, 25.9479, 73.0584 ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("AtleaSkeleton/Skirt/ThighR/ShinR/FootR:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -77.4207, 384.434 ), Vector2( -77.4207, 384.434 ), Vector2( -77.4207, 384.434 ), Vector2( -77.4207, 384.434 ) ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("AtleaSkeleton/Skirt/ThighR/ShinR/FootR:rotation_degrees")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 116.221, 116.221, 116.221, 116.221 ]
+}
