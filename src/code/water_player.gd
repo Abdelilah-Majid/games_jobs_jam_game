@@ -4,7 +4,7 @@ extends Actor
 
 
 var id_name="water"
-var old_speed:=speed
+onready var old_speed:=speed
 var is_walking_on_water_active:=false
 var is_moving_to_right=true
 
