@@ -39,10 +39,8 @@ func calculate_move_velocity(direction:Vector2,speed:Vector2,linear_velocity:Vec
 	new_velocity.x=speed.x*direction.x
 	if global_players_script.what_player_is_in_water!="water":
 		new_velocity.y+=gravity*get_physics_process_delta_time()
-		print("0")
 	elif global_players_script.what_player_is_in_water=="water":
 		new_velocity.y=water_speed*direction.y
-		print("1")
 	
 	if (direction.y ==-1.0 and global_players_script.what_player_is_in_water!="water") :
 		new_velocity.y=direction.y*speed.y

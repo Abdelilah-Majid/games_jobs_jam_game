@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rock_Roll.ogg-4bde664fb5d6710b11315ae88d1ee8f2.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/Sound Design/SFX/Rock_Roll.ogg"
+dest_files=[ "res://.import/Rock_Roll.ogg-4bde664fb5d6710b11315ae88d1ee8f2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

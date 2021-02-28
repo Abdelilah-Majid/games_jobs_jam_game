@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ignite_Brazier_1.ogg-04019400ea9e2ead9914085d18320ae6.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/Sound Design/SFX/Ignite_Brazier_1.ogg"
+dest_files=[ "res://.import/Ignite_Brazier_1.ogg-04019400ea9e2ead9914085d18320ae6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

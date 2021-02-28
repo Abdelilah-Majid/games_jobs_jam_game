@@ -18,3 +18,5 @@ stream = ExtResource( 6 )
 
 [node name="walk_on_water_sound_player3" type="AudioStreamPlayer2D" parent="." index="7"]
 stream = ExtResource( 3 )
+
+[editable path="small_popup"]
