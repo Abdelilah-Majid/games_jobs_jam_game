@@ -109,6 +109,7 @@ visible = false
 
 [node name="robot_player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1118, 211 )
+speed = Vector2( 300, 0 )
 
 [node name="Atlea" parent="." instance=ExtResource( 6 )]
 position = Vector2( 905, 284 )

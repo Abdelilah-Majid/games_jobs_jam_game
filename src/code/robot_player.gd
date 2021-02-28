@@ -2,7 +2,7 @@ extends Actor
 
 
 var id_name="robot"
-var old_speed:=speed
+onready var old_speed:=speed
 var is_moving_to_right=true
 func _physics_process(delta):
 	
