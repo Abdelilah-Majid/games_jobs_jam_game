@@ -1,22 +1,85 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://src/actors/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/code/water_player.gd" type="Script" id=2]
 [ext_resource path="res://assets/audio/Sound Design/Atlea/Atlea_Water_Steps/Water_Walk_01.ogg" type="AudioStream" id=3]
 [ext_resource path="res://assets/audio/Sound Design/Atlea/Atlea Jump/Jump_01.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/Characters/Atlea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://assets/audio/Sound Design/Atlea/Atlea Foot Steps/Footsteps_01.ogg" type="AudioStream" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 29, 104 )
 
 [node name="Atlea" instance=ExtResource( 1 )]
 collision_mask = 10
 script = ExtResource( 2 )
 
-[node name="jump_sound_player" type="AudioStreamPlayer2D" parent="." index="5"]
+[node name="Atlea" parent="." index="3" instance=ExtResource( 5 )]
+position = Vector2( -168, -137 )
+scale = Vector2( 0.12, 0.12 )
+
+[node name="Skirt" parent="Atlea/AtleaSkeleton" index="0"]
+rotation = 1.55867
+
+[node name="Neck" parent="Atlea/AtleaSkeleton/Skirt/Torso" index="0"]
+rotation = -0.32808
+
+[node name="Head" parent="Atlea/AtleaSkeleton/Skirt/Torso/Neck" index="0"]
+rotation = -2.29601
+
+[node name="ArmR" parent="Atlea/AtleaSkeleton/Skirt/Torso" index="1"]
+rotation = 0.269849
+
+[node name="ForeArmR" parent="Atlea/AtleaSkeleton/Skirt/Torso/ArmR" index="0"]
+position = Vector2( -12.5233, 236.909 )
+rotation = 0.265615
+
+[node name="HandR" parent="Atlea/AtleaSkeleton/Skirt/Torso/ArmR/ForeArmR" index="0"]
+rotation = 1.68687
+
+[node name="ArmL" parent="Atlea/AtleaSkeleton/Skirt/Torso" index="2"]
+position = Vector2( 29.3663, -226.34 )
+rotation = -0.260407
+
+[node name="ForeArmL" parent="Atlea/AtleaSkeleton/Skirt/Torso/ArmL" index="0"]
+position = Vector2( -10.2843, 240.671 )
+rotation = -0.244063
+
+[node name="HandL" parent="Atlea/AtleaSkeleton/Skirt/Torso/ArmL/ForeArmL" index="0"]
+rotation = 1.72508
+
+[node name="ThighR" parent="Atlea/AtleaSkeleton/Skirt" index="1"]
+position = Vector2( -35.0173, 83.5859 )
+rotation = 0.38832
+
+[node name="ShinR" parent="Atlea/AtleaSkeleton/Skirt/ThighR" index="0"]
+rotation = -0.223446
+
+[node name="FootR" parent="Atlea/AtleaSkeleton/Skirt/ThighR/ShinR" index="0"]
+rotation = 2.02844
+
+[node name="ThighL" parent="Atlea/AtleaSkeleton/Skirt" index="2"]
+rotation = -0.171836
+
+[node name="ShinL" parent="Atlea/AtleaSkeleton/Skirt/ThighL" index="0"]
+rotation = -0.0861421
+
+[node name="FootL" parent="Atlea/AtleaSkeleton/Skirt/ThighL/ShinL" index="0"]
+rotation = 1.90248
+
+[node name="jump_sound_player" type="AudioStreamPlayer2D" parent="." index="4"]
 stream = ExtResource( 4 )
 
-[node name="walk_sound_player2" type="AudioStreamPlayer2D" parent="." index="6"]
+[node name="walk_sound_player2" type="AudioStreamPlayer2D" parent="." index="5"]
 stream = ExtResource( 6 )
 
-[node name="walk_on_water_sound_player3" type="AudioStreamPlayer2D" parent="." index="7"]
+[node name="walk_on_water_sound_player3" type="AudioStreamPlayer2D" parent="." index="6"]
 stream = ExtResource( 3 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="7"]
+position = Vector2( 2, -6 )
+shape = SubResource( 1 )
+
 [editable path="small_popup"]
+
+[editable path="Atlea"]

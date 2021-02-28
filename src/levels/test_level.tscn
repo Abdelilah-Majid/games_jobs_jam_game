@@ -77,12 +77,6 @@ position = Vector2( 440, 284 )
 [node name="moving_platforms" parent="." instance=ExtResource( 5 )]
 position = Vector2( 2559, 360 )
 
-[node name="robot_player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1128, 331 )
-
-[node name="water_player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1272, 331 )
-
 [node name="water_shader" parent="." instance=ExtResource( 1 )]
 visible = false
 position = Vector2( 2680, 774 )
@@ -112,6 +106,12 @@ visible = false
 [node name="ParallaxLayer" parent="CanvasLayer/Control/ParallaxBackground" index="0"]
 visible = false
 
-[editable path="robot_player"]
+[node name="robot_player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1118, 211 )
+
+[node name="Atlea" parent="." instance=ExtResource( 6 )]
+position = Vector2( 905, 284 )
 
 [editable path="CanvasLayer"]
+
+[editable path="robot_player"]

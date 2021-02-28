@@ -6,7 +6,7 @@ extends Actor
 var id_name="water"
 var old_speed:=speed
 var is_walking_on_water_active:=false
-
+var is_moving_to_right=true
 
 var jump_sounds_arr=[
 	preload("res://assets/audio/Sound Design/Atlea/Atlea Jump/Jump_01.ogg"),
@@ -44,6 +44,33 @@ func _physics_process(delta: float) -> void:
 	if global_water_player_script.is_water_player_collide_with_water_button && global_players_script.current_player=="water":
 		if Input.is_action_just_pressed("space_key"):
 			global_water_player_script.is_water_button_activated=!global_water_player_script.is_water_button_activated
+	
+	
+	if Input.is_action_just_pressed("move_right") && global_players_script.current_player=="water":
+		if !is_moving_to_right:
+			scale.x=-1
+			is_moving_to_right=true
+	if Input.is_action_just_pressed("move_left") && global_players_script.current_player=="water":
+		if is_moving_to_right:
+			scale.x=-1
+			is_moving_to_right=false
+	
+	
+	if (Input.is_action_pressed("move_left")  || Input.is_action_pressed("move_right")) && is_on_floor() && global_players_script.current_player=="water":
+		get_node("Atlea/AnimationPlayer").play("Run")
+		get_node("CollisionShape2D").rotation_degrees=0
+	if !(Input.is_action_pressed("move_left")  || Input.is_action_pressed("move_right")) && is_on_floor() && global_players_script.what_player_is_in_water!="water":
+		get_node("Atlea/AnimationPlayer").play("Idle")
+		get_node("CollisionShape2D").rotation_degrees=0
+	if Input.is_action_just_pressed("jump") && global_players_script.what_player_is_in_water!="water" && global_players_script.current_player=="water":
+		get_node("Atlea/AnimationPlayer").play("Jump")
+		get_node("CollisionShape2D").rotation_degrees=0
+	if (Input.is_action_pressed("move_left")  || Input.is_action_pressed("move_right")) && global_players_script.what_player_is_in_water=="water" && global_players_script.current_player=="water":
+		get_node("Atlea/AnimationPlayer").play("Swimming")
+		get_node("CollisionShape2D").rotation_degrees=90
+	if !(Input.is_action_pressed("move_left")  || Input.is_action_pressed("move_right")) && global_players_script.what_player_is_in_water=="water":
+		get_node("Atlea/AnimationPlayer").play("SwimmingIdle")
+		get_node("CollisionShape2D").rotation_degrees=0
 	
 	
 	check_play_sound()
