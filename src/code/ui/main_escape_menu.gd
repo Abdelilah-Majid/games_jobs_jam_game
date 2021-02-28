@@ -25,3 +25,7 @@ func _on_replay_button_up() -> void:
 
 func _on_quit_button_down() -> void:
 	get_tree().quit()
+
+
+func _on_go_back_to_menu_button_up() -> void:
+	get_tree().change_scene("res://UI/main_menu.tscn")
