@@ -3,8 +3,7 @@ extends Actor
 
 var id_name="robot"
 var old_speed:=speed
-
-
+var is_moving_to_right=true
 func _physics_process(delta):
 	
 	for i in range(get_slide_count() - 1):
@@ -12,10 +11,18 @@ func _physics_process(delta):
 		print()
 		if collision.collider.get_collision_layer_bit(4)==true:
 			collision.collider.push(get_direction().x)
-		
-		
-		
-		
+	
+	
+	if Input.is_action_just_pressed("move_right"):
+		if !is_moving_to_right:
+			scale.x=-1
+			is_moving_to_right=true
+	if Input.is_action_just_pressed("move_left"):
+		if is_moving_to_right:
+			scale.x=-1
+			is_moving_to_right=false
+	
+	
 	if global_players_script.current_player=="water":
 		get_node("Camera2D").current=false
 		speed=Vector2(0.0,0.0)
