@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway b.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway c.png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/intro_level_bg.png" type="Texture" id=4]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway d.png" type="Texture" id=5]
+
+[node name="Level 0" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="BackGround" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="BG" type="Sprite" parent="ParallaxBackground/BackGround"]
+position = Vector2( -1167.95, -359.325 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="MidGround" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 0.7 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/MidGround"]
+position = Vector2( 976.707, 1099.42 )
+scale = Vector2( 2.96418, 2.96418 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/MidGround"]
+position = Vector2( 2138.74, 1064.23 )
+scale = Vector2( 2.84247, 2.84247 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/MidGround"]
+position = Vector2( -907.305, 1015.58 )
+scale = Vector2( 3.26105, 3.26105 )
+texture = ExtResource( 5 )
+centered = false
