@@ -3,7 +3,7 @@ extends Actor
 
 
 
-
+var id_name="water"
 var old_speed:=speed
 var is_walking_on_water_active:=false
 
@@ -18,7 +18,7 @@ var jump_sound_arr_index=0
 
 var olde_gravity=gravity
 func _physics_process(delta: float) -> void:
-	if global_water_player_script.is_in_water==true:
+	if global_players_script.what_player_is_in_water=="water" :
 		gravity=0
 		is_water_player_is_in_water=true
 	else:

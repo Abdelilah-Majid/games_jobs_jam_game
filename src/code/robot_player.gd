@@ -1,7 +1,7 @@
 extends Actor
 
 
-
+var id_name="robot"
 var old_speed:=speed
 
 
@@ -12,6 +12,8 @@ func _physics_process(delta):
 		print()
 		if collision.collider.get_collision_layer_bit(4)==true:
 			collision.collider.push(get_direction().x)
+		
+		
 		
 		
 	if global_players_script.current_player=="water":
