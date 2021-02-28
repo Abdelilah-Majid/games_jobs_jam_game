@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/actors/water_player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway b.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway c.png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/livaroy/PNG/LVL4/LVL_4_bg.png" type="Texture" id=4]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway d.png" type="Texture" id=5]
+[ext_resource path="res://src/actors/robot_player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/graphics/livaroy/PNG/LVL4/LVL_4_groundplane.png" type="Texture" id=7]
+[ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/BG COLOUR.png" type="Texture" id=8]
+
+[node name="Level 0" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="BG COLOUR" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 2683.28, 1430.2 )
+scale = Vector2( 3.28424, 1.83317 )
+texture = ExtResource( 8 )
+
+[node name="BackGround" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="BG" type="Sprite" parent="ParallaxBackground/BackGround"]
+position = Vector2( -1167.95, -363.101 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="MidGround" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/MidGround"]
+position = Vector2( 5702.04, 399.964 )
+scale = Vector2( 2.96418, 2.96418 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/MidGround"]
+position = Vector2( 4552.13, 578.348 )
+scale = Vector2( 2.84247, 2.84247 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/MidGround"]
+position = Vector2( 3257.4, 481.644 )
+scale = Vector2( 3.26105, 3.26105 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 60.5811, 7.1272 )
+
+[node name="intro_level_groundplane" type="Sprite" parent="Area2D"]
+position = Vector2( -1150.28, 618.951 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -1145.06, 642.967, -449.062, 742.967, -537.062, 1062.97, -593.062, 1326.97, -317.062, 1586.97, 762.938, 1582.97, 862.938, 1378.97, 954.938, 878.967, 1274.94, 866.967, 1186.94, 1158.97, 1398.94, 1442.97, 2470.94, 1418.97, 2606.94, 1074.97, 2534.94, 814.967, 2822.94, 802.967, 3018.94, 902.967, 3210.94, 910.967, 3258.94, 1078.97, 3418.94, 1086.97, 3458.94, 926.967, 3566.94, 926.967, 3578.94, 1098.97, 3818.94, 1074.97, 3810.94, 910.967, 4146.94, 910.967, 4202.94, 1098.97, 4422.94, 1074.97, 4394.94, 910.967, 4714.94, 906.967, 4706.94, 1070.97, 4918.94, 1062.97, 4926.94, 926.967, 5154.94, 934.967, 5166.94, 1058.97, 5406.94, 1058.97, 5394.94, 910.967, 5766.94, 910.967, 5790.94, 1038.97, 5950.94, 1038.97, 5958.94, 854.967, 6318.94, 798.967, 6806.94, 802.967, 6638.94, 1234.97, 6302.94, 1526.97, 6006.94, 1562.97, 5730.94, 1602.97, 5302.94, 1642.97, 4778.94, 1702.97, 4582.94, 1702.97, 4394.94, 1726.97, 4330.94, 1722.97, 4190.94, 1730.97, 4014.94, 1730.97, 3874.94, 1734.97, 3666.94, 1734.97, 3550.94, 1734.97, 3258.94, 1730.97, 3154.94, 1730.97, 2850.94, 1734.97, 2682.94, 1722.97, 2446.94, 1718.97, 2398.94, 1714.97, 2206.94, 1698.97, 1562.94, 1746.97, 1346.94, 1702.97, 1230.94, 1698.97, 982.938, 1702.97, 862.938, 1702.97, 710.938, 1706.97, -485.062, 1750.97, -649.062, 1694.97, -857.062, 1574.97, -1013.06, 1418.97, -1053.06, 1270.97, -1089.06, 1014.97, -1117.06, 834.967 )
+
+[node name="Atlea" parent="." instance=ExtResource( 1 )]
+position = Vector2( -544.057, 469.645 )
+
+[node name="robot_player" parent="." instance=ExtResource( 6 )]
+position = Vector2( -844.024, 441.967 )

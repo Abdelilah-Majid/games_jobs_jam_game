@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/actors/water_player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/intro_level_bg.png" type="Texture" id=2]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway c.png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway d.png" type="Texture" id=4]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway b.png" type="Texture" id=5]
+[ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/intro_level_groundplane.png" type="Texture" id=6]
+[ext_resource path="res://src/actors/robot_player.tscn" type="PackedScene" id=7]
+
+[node name="Level 0" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="BackGround" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 101.938, -3.77551 )
+
+[node name="BG" type="Sprite" parent="ParallaxBackground/BackGround"]
+position = Vector2( -1167.95, -363.101 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="MidGround" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0.5 )
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/MidGround"]
+position = Vector2( 976.707, 1099.42 )
+scale = Vector2( 2.96418, 2.96418 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Sprite3" type="Sprite" parent="ParallaxBackground/MidGround"]
+position = Vector2( 2138.74, 1064.23 )
+scale = Vector2( 2.84247, 2.84247 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Sprite4" type="Sprite" parent="ParallaxBackground/MidGround"]
+position = Vector2( -907.305, 1015.58 )
+scale = Vector2( 3.26105, 3.26105 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 60.5811, 7.1272 )
+
+[node name="intro_level_groundplane" type="Sprite" parent="Area2D"]
+position = Vector2( -1088.33, 1041.01 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -1063.38, 1165.74, -1024.18, 1425.88, -874.511, 1482.9, 1377.68, 1457.95, 1406.19, 1561.3, 1987.06, 1554.17, 2015.56, 1440.14, 2225.82, 1397.37, 3230.75, 1372.43, 3408.93, 1215.63, 3405.37, 1155.05, 1855.2, 1233.45, 1855.2, 1443.7, 1538.04, 1440.14, 1538.04, 1261.96, 215.949, 1279.77, -290.081, 1197.81 )
+one_way_collision_margin = 0.0
+
+[node name="Atlea" parent="." instance=ExtResource( 1 )]
+position = Vector2( -635.75, 549.237 )
+
+[node name="robot_player" parent="." instance=ExtResource( 7 )]
+position = Vector2( -247.067, 964.148 )
