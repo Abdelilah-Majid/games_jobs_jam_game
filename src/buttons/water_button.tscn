@@ -1,19 +1,21 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
-[ext_resource path="res://src/code/buttons/water_button.gd" type="Script" id=2]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/Atlea_switch_inactive.png" type="Texture" id=1]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/Atlea_switch_activated.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 29, 30 )
+extents = Vector2( 118, 69 )
 
-[node name="button" type="Sprite"]
-modulate = Color( 1, 0.00784314, 0.00784314, 1 )
+[node name="button" type="Area2D"]
+
+[node name="button_on" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="button_off" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
-script = ExtResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
