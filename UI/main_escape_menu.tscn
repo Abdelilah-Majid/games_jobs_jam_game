@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/graphics/buttons/button_background.png" type="Texture" id=1]
 [ext_resource path="res://src/code/ui/main_escape_menu.gd" type="Script" id=2]
+[ext_resource path="res://assets/graphics/livaroy/PNG/HUD/CONTINUE.png" type="Texture" id=3]
+[ext_resource path="res://assets/graphics/livaroy/PNG/HUD/EXIT.png" type="Texture" id=4]
 
 [node name="escape_menu" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -28,7 +30,7 @@ margin_left = -170.0
 margin_top = -261.0
 margin_right = 171.0
 margin_bottom = -171.0
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 3 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -73,7 +75,7 @@ margin_left = -170.0
 margin_top = 189.0
 margin_right = 171.0
 margin_bottom = 279.0
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 4 )
 expand = true
 __meta__ = {
 "_edit_use_anchors_": false

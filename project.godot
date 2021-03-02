@@ -26,9 +26,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="game_jobs_game_jam_game_0"
-run/main_scene="res://src/levels/level_1.tscn"
-config/icon="res://icon.png"
+config/name="atlea"
+run/main_scene="res://src/AshLevels/Level 0.tscn"
+config/icon="res://assets/graphics/livaroy/PNG/HUD/ATLEA_title.png"
 
 [autoload]
 
