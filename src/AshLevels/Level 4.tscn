@@ -8,14 +8,14 @@
 [ext_resource path="res://src/actors/robot_player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/graphics/livaroy/PNG/LVL4/LVL_4_groundplane.png" type="Texture" id=7]
 [ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/BG COLOUR.png" type="Texture" id=8]
-[ext_resource path="res://assets/audio/Soundtrack/Main_Menu.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/audio/Soundtrack/Track_3.ogg" type="AudioStream" id=9]
 
 [node name="Level 0" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="BG COLOUR" type="Sprite" parent="ParallaxBackground"]
-position = Vector2( 2683.28, 1430.2 )
+position = Vector2( 2657.85, 1370.87 )
 scale = Vector2( 3.28424, 1.83317 )
 texture = ExtResource( 8 )
 
@@ -69,3 +69,4 @@ position = Vector2( -844.024, 441.967 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 autoplay = true
+bus = "Soundtrack"

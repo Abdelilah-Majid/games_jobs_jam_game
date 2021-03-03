@@ -60,3 +60,4 @@ next_scene = "res://src/AshLevels/Level 4.tscn"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 autoplay = true
+bus = "Soundtrack"
