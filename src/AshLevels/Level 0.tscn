@@ -9,7 +9,7 @@
 [ext_resource path="res://src/actors/robot_player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/objects/boulders/boulder0.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/objects/change_scene.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/audio/Soundtrack/Track_2_possible_Underwater_lvl.ogg" type="AudioStream" id=10]
+[ext_resource path="res://assets/audio/Soundtrack/Track_2.ogg" type="AudioStream" id=10]
 
 [node name="Level 0" type="Node2D"]
 
@@ -74,3 +74,5 @@ scale = Vector2( 0.982456, 0.516216 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+autoplay = true
+bus = "Soundtrack"
