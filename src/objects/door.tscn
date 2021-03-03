@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/objects/change_scene.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/door.png" type="Texture" id=2]
+[ext_resource path="res://src/code/items/door.gd" type="Script" id=3]
+
+[node name="Sprite2" type="Sprite"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="change_scene" parent="." instance=ExtResource( 1 )]
+position = Vector2( 104.155, 62.0499 )
