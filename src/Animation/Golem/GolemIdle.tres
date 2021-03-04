@@ -2,6 +2,8 @@
 
 [resource]
 resource_name = "Idle"
+length = 2.0
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("GolemSkeleton/Pelvis/Torso/Head:position")
 tracks/0/interp = 1
@@ -9,10 +11,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1.4, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 566.792, 9.91947 ), Vector2( 611.149, 0.948059 ), Vector2( 566.792, 9.91947 ) ]
+"values": [ Vector2( 566.792, 9.91947 ), Vector2( 584.535, 6.33091 ), Vector2( 537.937, 9.2774 ), Vector2( 566.792, 9.91947 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("GolemSkeleton/Pelvis/Torso/Head:rotation_degrees")
@@ -21,10 +23,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1.4, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 60.0698, 60.0698, 60.0698 ]
+"values": [ 60.0698, 60.0698, 72.8408, 60.0698 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("GolemSkeleton/Pelvis/Torso/ShoulderR:position")
@@ -33,10 +35,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 403.629, -146.573 ), Vector2( 437.955, -176.601 ), Vector2( 403.629, -146.573 ) ]
+"values": [ Vector2( 403.629, -146.573 ), Vector2( 468.407, -162.431 ), Vector2( 417.359, -158.584 ), Vector2( 403.629, -146.573 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("GolemSkeleton/Pelvis/Torso/ShoulderR:rotation_degrees")
@@ -45,10 +47,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 102.42, 109.755, 102.42 ]
+"values": [ 102.42, 105.354, 105.354, 102.42 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("GolemSkeleton/Pelvis/Torso/ShoulderL:position")
@@ -57,10 +59,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 394.555, 199.314 ), Vector2( 461.153, 214.701 ), Vector2( 394.555, 199.314 ) ]
+"values": [ Vector2( 394.555, 199.314 ), Vector2( 472.242, 201.622 ), Vector2( 421.194, 205.469 ), Vector2( 394.555, 199.314 ) ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("GolemSkeleton/Pelvis/Torso/ShoulderL:rotation_degrees")
@@ -69,10 +71,10 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.8, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 79.5004, 70.7642, 79.5004 ]
+"values": [ 79.5004, 76.0059, 76.0059, 79.5004 ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("GolemSkeleton/Pelvis:position")
@@ -81,7 +83,7 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -5.65686, 653.367 ), Vector2( -5.65686, 653.367 ), Vector2( -5.65686, 653.367 ) ]
@@ -93,7 +95,7 @@ tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.0, 0.0, 0.0 ]
@@ -105,7 +107,7 @@ tracks/8/loop_wrap = true
 tracks/8/imported = false
 tracks/8/enabled = true
 tracks/8/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 0.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -45.2549, 376.181 ), Vector2( -45.2549, 376.181 ), Vector2( -45.2549, 376.181 ) ]
@@ -117,10 +119,10 @@ tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 0.7, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 71.2091, 72.1805, 71.2091 ]
+"values": [ 71.2091, 71.5977, 71.2091 ]
 }
 tracks/10/type = "value"
 tracks/10/path = NodePath("GolemSkeleton/Pelvis/Torso/ShoulderR/ArmR:position")
@@ -129,7 +131,7 @@ tracks/10/loop_wrap = true
 tracks/10/imported = false
 tracks/10/enabled = true
 tracks/10/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1.4, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -45.2549, 376.181 ), Vector2( -45.2549, 376.181 ), Vector2( -45.2549, 376.181 ) ]
@@ -141,10 +143,10 @@ tracks/11/loop_wrap = true
 tracks/11/imported = false
 tracks/11/enabled = true
 tracks/11/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1.4, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 60.5095, 42.1114, 60.5095 ]
+"values": [ 60.5095, 53.1503, 60.5095 ]
 }
 tracks/12/type = "value"
 tracks/12/path = NodePath("GolemSkeleton/Pelvis/Torso:position")
@@ -153,10 +155,10 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -8.48523, -158.392 ), Vector2( 36.7697, -226.274 ), Vector2( -8.48523, -158.392 ) ]
+"values": [ Vector2( -8.48523, -158.392 ), Vector2( 9.61674, -185.545 ), Vector2( -8.48523, -158.392 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("GolemSkeleton/Pelvis/Torso:rotation_degrees")
@@ -165,7 +167,7 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ -78.5658, -78.5658, -78.5658 ]
@@ -177,7 +179,7 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 22.6273, 22.6275 ), Vector2( 22.6273, 22.6275 ), Vector2( 22.6273, 22.6275 ) ]
@@ -189,7 +191,7 @@ tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 69.2192, 69.2192, 69.2192 ]
@@ -201,7 +203,7 @@ tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -82.0244, 16.9706 ), Vector2( -82.0244, 16.9706 ), Vector2( -82.0244, 16.9706 ) ]
@@ -213,7 +215,7 @@ tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
+"times": PoolRealArray( 0, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 93.8046, 93.8046, 93.8046 ]

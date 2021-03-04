@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/Animation/Golem/GolemWalk.tres" type="Animation" id=1]
 [ext_resource path="res://assets/Characters/GolemBodyParts.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://src/Animation/Golem/GolemWakingUp.tres" type="Animation" id=5]
 [ext_resource path="res://src/Animation/Golem/GolemPushing Boulder.tres" type="Animation" id=6]
 [ext_resource path="res://src/Animation/Golem/GolemLever Push.tres" type="Animation" id=7]
+[ext_resource path="res://src/Animation/Golem/GolemJump.tres" type="Animation" id=8]
 
 [node name="Golem" type="Node2D"]
 position = Vector2( 881.945, 20.1588 )
@@ -114,36 +115,36 @@ rest = Transform2D( 1, 0, 0, 1, -5.65686, 653.367 )
 default_length = 117.0
 
 [node name="Torso" type="Bone2D" parent="GolemSkeleton/Pelvis"]
-position = Vector2( -8.48523, -158.392 )
+position = Vector2( 6.18111, -180.391 )
 rotation = -1.37123
 rest = Transform2D( 0.0473916, -0.998876, 0.998876, 0.0473916, -8.48523, -158.392 )
 default_length = 576.0
 
 [node name="Head" type="Bone2D" parent="GolemSkeleton/Pelvis/Torso"]
-position = Vector2( 566.792, 9.91947 )
-rotation = 1.04842
+position = Vector2( 548.82, 8.58921 )
+rotation = 1.21925
 rest = Transform2D( 0.498945, 0.866634, -0.866634, 0.498945, 566.792, 9.91947 )
 default_length = 178.0
 
 [node name="ShoulderR" type="Bone2D" parent="GolemSkeleton/Pelvis/Torso"]
-position = Vector2( 403.629, -146.573 )
-rotation = 1.78757
+position = Vector2( 439.981, -160.289 )
+rotation = 1.83877
 rest = Transform2D( 0.0473916, 0.998876, -0.998876, 0.0473916, 403.629, -146.573 )
 
 [node name="ArmR" type="Bone2D" parent="GolemSkeleton/Pelvis/Torso/ShoulderR"]
 position = Vector2( -45.2549, 376.181 )
-rotation = 1.05609
+rotation = 0.946932
 rest = Transform2D( -0.211282, 0.977425, -0.977425, -0.211282, -45.2549, 376.181 )
 default_length = 371.0
 
 [node name="ShoulderL" type="Bone2D" parent="GolemSkeleton/Pelvis/Torso"]
-position = Vector2( 394.555, 199.314 )
-rotation = 1.38754
+position = Vector2( 443.816, 203.764 )
+rotation = 1.32655
 rest = Transform2D( 0.0473916, 0.998876, -0.998876, 0.0473916, 394.555, 199.314 )
 
 [node name="ArmL" type="Bone2D" parent="GolemSkeleton/Pelvis/Torso/ShoulderL"]
 position = Vector2( -45.2549, 376.181 )
-rotation = 1.24283
+rotation = 1.24706
 rest = Transform2D( -0.211282, 0.977425, -0.977425, -0.211282, -45.2549, 376.181 )
 default_length = 371.0
 
@@ -162,6 +163,7 @@ default_length = 477.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Dying = ExtResource( 3 )
 anims/Idle = ExtResource( 4 )
+anims/Jump = ExtResource( 8 )
 "anims/Lever Push" = ExtResource( 7 )
 "anims/Pushing Boulder" = ExtResource( 6 )
 anims/WakingUp = ExtResource( 5 )
