@@ -8,6 +8,7 @@
 [node name="robot_player" instance=ExtResource( 2 )]
 collision_mask = 26
 script = ExtResource( 1 )
+speed = Vector2( 300, 1000 )
 
 [node name="Light2D" type="Light2D" parent="." index="0"]
 position = Vector2( 512, -91 )

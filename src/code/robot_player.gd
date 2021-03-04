@@ -37,7 +37,7 @@ func _physics_process(delta):
 	if global_players_script.current_player=="robot":
 		get_node("Camera2D").current=true
 		speed=old_speed
-		speed.y=0
+		
 	
 
 	check_for_change_player_action()
