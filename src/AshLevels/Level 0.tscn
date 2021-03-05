@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/actors/water_player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/intro_level_bg.png" type="Texture" id=2]
@@ -11,6 +11,15 @@
 [ext_resource path="res://src/objects/change_scene.tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets/audio/Soundtrack/Track_2.ogg" type="AudioStream" id=10]
 [ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/BG COLOUR.png" type="Texture" id=11]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/objects/Lighting_Braziers.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/objects/robot_heart.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/objects/open_door_platform.tscn" type="PackedScene" id=17]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 138.535, 1051.77 )
 
 [node name="Level 0" type="Node2D"]
 
@@ -25,7 +34,7 @@ texture = ExtResource( 11 )
 position = Vector2( 101.938, -3.77551 )
 
 [node name="BG" type="Sprite" parent="ParallaxBackground/BackGround"]
-position = Vector2( -1167.95, -363.101 )
+position = Vector2( -1171.12, -363.101 )
 texture = ExtResource( 2 )
 centered = false
 
@@ -50,8 +59,6 @@ scale = Vector2( 3.26105, 3.26105 )
 texture = ExtResource( 4 )
 centered = false
 
-[node name="Node2D" type="Node2D" parent="."]
-
 [node name="change_scene" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3297.28, 871.295 )
 next_scene = "res://src/AshLevels/Level 1.tscn"
@@ -65,18 +72,64 @@ texture = ExtResource( 6 )
 centered = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
-polygon = PoolVector2Array( -1063.38, 1165.74, -1024.18, 1425.88, -874.511, 1482.9, 1377.68, 1457.95, 1406.19, 1561.3, 1987.06, 1554.17, 2015.56, 1440.14, 2225.82, 1397.37, 3230.75, 1372.43, 3408.93, 1215.63, 3405.37, 1155.05, 1855.2, 1233.45, 1855.2, 1443.7, 1538.04, 1440.14, 1538.04, 1261.96, 215.949, 1279.77, -290.081, 1197.81 )
+polygon = PoolVector2Array( -1063.19, 1136.92, -1024.18, 1425.88, -874.511, 1482.9, 1377.68, 1457.95, 1406.19, 1561.3, 1987.06, 1554.17, 2015.56, 1440.14, 2225.82, 1397.37, 3230.75, 1372.43, 3408.93, 1215.63, 3405.37, 1155.05, 2046.95, 1223.75, 1856.81, 1266.92, 1855.2, 1443.7, 1538.04, 1440.14, 1536.81, 1316.92, 1366.81, 1246.92, 310.81, 1256.92, -291.19, 1168.92 )
 one_way_collision_margin = 0.0
 
-[node name="Atlea" parent="." instance=ExtResource( 1 )]
-position = Vector2( -504.937, 994 )
+[node name="StandardPlat1" parent="Ground" instance=ExtResource( 13 )]
+position = Vector2( 536.315, 542.294 )
+
+[node name="StandardPlat2" parent="Ground" instance=ExtResource( 12 )]
+position = Vector2( 115.811, 806 )
+
+[node name="StandardPlat3" parent="Ground" instance=ExtResource( 14 )]
+position = Vector2( -373.959, 382.788 )
+
+[node name="StandardPlat4" parent="Ground" instance=ExtResource( 13 )]
+position = Vector2( -898.086, 150.963 )
+
+[node name="StandardPlat5" parent="Ground" instance=ExtResource( 12 )]
+position = Vector2( -885.487, 634.772 )
+
+[node name="Sides" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -1240.04, 479.362 )
+shape = SubResource( 2 )
+
+[node name="Sides2" type="CollisionShape2D" parent="Ground"]
+position = Vector2( 3567.82, 806.942 )
+shape = SubResource( 2 )
+
+[node name="open_door_platform" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2721.9, 1159.83 )
+rotation = -0.0583416
+scale = Vector2( 0.658, 0.189 )
+
+[node name="Braziers" type="Node2D" parent="."]
+position = Vector2( -862.466, 1019.41 )
+scale = Vector2( 0.15, 0.15 )
+
+[node name="Lighting_Braziers2" parent="Braziers" instance=ExtResource( 15 )]
+scale = Vector2( 1, 1 )
+
+[node name="Lighting_Braziers3" parent="Braziers" instance=ExtResource( 15 )]
+position = Vector2( 9797.22, -4035.78 )
+scale = Vector2( 1, 1 )
+
+[node name="Lighting_Braziers" parent="Braziers" instance=ExtResource( 15 )]
+position = Vector2( 20360.8, 634.252 )
+scale = Vector2( 1, 1 )
 
 [node name="robot_player" parent="." instance=ExtResource( 7 )]
-position = Vector2( 649.595, 1075.93 )
+position = Vector2( 2053.9, 1049.02 )
+
+[node name="robot_heart" parent="robot_player" instance=ExtResource( 16 )]
+position = Vector2( 1462.87, 138.511 )
+
+[node name="Atlea" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2283.33, 1104.81 )
 
 [node name="boulder0" parent="." instance=ExtResource( 8 )]
-position = Vector2( 1125.38, 1143 )
-scale = Vector2( 0.982456, 0.516216 )
+position = Vector2( 1634.27, 1110.28 )
+scale = Vector2( 1, 0.864 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )

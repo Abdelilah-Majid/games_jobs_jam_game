@@ -7,7 +7,7 @@
 extents = Vector2( 256, 420 )
 
 [node name="Lighting_Braziers" type="Sprite"]
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 
