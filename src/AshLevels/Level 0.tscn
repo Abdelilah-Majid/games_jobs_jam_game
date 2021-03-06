@@ -18,7 +18,7 @@
 [ext_resource path="res://src/objects/robot_heart.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/objects/open_door_platform.tscn" type="PackedScene" id=17]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 138.535, 1051.77 )
 
 [node name="Level 0" type="Node2D"]
@@ -92,16 +92,15 @@ position = Vector2( -885.487, 634.772 )
 
 [node name="Sides" type="CollisionShape2D" parent="Ground"]
 position = Vector2( -1240.04, 479.362 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sides2" type="CollisionShape2D" parent="Ground"]
 position = Vector2( 3567.82, 806.942 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="open_door_platform" parent="." instance=ExtResource( 17 )]
 position = Vector2( 2721.9, 1159.83 )
 rotation = -0.0583416
-scale = Vector2( 0.658, 0.189 )
 
 [node name="Braziers" type="Node2D" parent="."]
 position = Vector2( -862.466, 1019.41 )
