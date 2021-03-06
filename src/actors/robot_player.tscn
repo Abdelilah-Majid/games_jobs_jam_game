@@ -14,17 +14,18 @@ collision_mask = 26
 script = ExtResource( 1 )
 speed = Vector2( 300, 1000 )
 
-[node name="Light2D" type="Light2D" parent="." index="0"]
-position = Vector2( 512, -91 )
-scale = Vector2( 1.51199, 1 )
-texture = ExtResource( 3 )
-energy = 3.0
-
-[node name="Golem" parent="." index="3" instance=ExtResource( 4 )]
+[node name="Golem" parent="." index="2" instance=ExtResource( 4 )]
 position = Vector2( 0, -80 )
 scale = Vector2( 0.16, 0.16 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="5"]
+[node name="Light2D" type="Light2D" parent="Golem/GolemSkeleton/Pelvis/Torso" index="3"]
+position = Vector2( 1021.12, 3266.77 )
+rotation = 1.4077
+scale = Vector2( 9.44994, 6.25 )
+texture = ExtResource( 3 )
+energy = 3.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="4"]
 position = Vector2( 8, 11 )
 shape = SubResource( 1 )
 
