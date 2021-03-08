@@ -4,8 +4,9 @@
 [ext_resource path="res://assets/graphics/normal_maps/boulders/boulder0.png" type="Texture" id=2]
 [ext_resource path="res://src/code/boulder0.gd" type="Script" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 150, 150 )
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 162.52
+height = 26.0604
 
 [node name="boulder0" type="KinematicBody2D"]
 collision_layer = 16
