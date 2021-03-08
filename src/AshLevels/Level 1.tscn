@@ -93,6 +93,7 @@ position = Vector2( 5471.41, 82.5107 )
 
 [node name="boulder1" parent="Iteractables" instance=ExtResource( 12 )]
 position = Vector2( 1035.24, 640.962 )
+scale = Vector2( 0.800001, 1 )
 
 [node name="boulder2" parent="Iteractables" instance=ExtResource( 12 )]
 position = Vector2( 3099.99, 475.638 )
@@ -117,7 +118,7 @@ position = Vector2( -741.726, 676.756 )
 position = Vector2( -996, 584 )
 
 [node name="change_scene" parent="." instance=ExtResource( 9 )]
-position = Vector2( 7642.74, 215.321 )
+position = Vector2( 7684.69, 254.277 )
 next_scene = "res://src/AshLevels/Level 2.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

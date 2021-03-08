@@ -1,14 +1,21 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/actors/water_player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/graphics/livaroy/PNG/LEVEL 2/level__2_groundplane.png" type="Texture" id=2]
 [ext_resource path="res://assets/graphics/livaroy/PNG/LEVEL 2/level__2_BG.png" type="Texture" id=3]
-[ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/Crystal_geode.png" type="Texture" id=4]
+[ext_resource path="res://src/objects/Lighting_Braziers.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/leaves.png" type="Texture" id=5]
 [ext_resource path="res://src/actors/robot_player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/BG COLOUR.png" type="Texture" id=7]
 [ext_resource path="res://src/objects/change_scene.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/audio/Soundtrack/Track_2.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/objects/water_button.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/objects/boulders/boulder0.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform1.tscn" type="PackedScene" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Level 0" type="Node2D"]
 
@@ -20,28 +27,20 @@ scale = Vector2( 2.45759, 1.74087 )
 texture = ExtResource( 7 )
 
 [node name="BackGround" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.5, 0.5 )
 
 [node name="BG" type="Sprite" parent="ParallaxBackground/BackGround"]
 position = Vector2( -1058.46, -140.347 )
 texture = ExtResource( 3 )
 centered = false
 
+[node name="button" parent="ParallaxBackground/BackGround" instance=ExtResource( 12 )]
+position = Vector2( 3.95361, 699.733 )
+
+[node name="button2" parent="ParallaxBackground/BackGround" instance=ExtResource( 12 )]
+position = Vector2( 2835.75, 960.438 )
+
 [node name="MidGround" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.5, 0.5 )
-
-[node name="Crystal_geode" type="Sprite" parent="ParallaxBackground/MidGround"]
-modulate = Color( 0.396078, 0.407843, 0.541176, 1 )
-position = Vector2( 79.0288, 574.788 )
-texture = ExtResource( 4 )
-offset = Vector2( -85.3071, 95.6627 )
-
-[node name="Crystal_geode2" type="Sprite" parent="ParallaxBackground/MidGround"]
-modulate = Color( 0.396078, 0.407843, 0.541176, 1 )
-position = Vector2( 2961.51, 808.26 )
-rotation = -0.268353
-texture = ExtResource( 4 )
-offset = Vector2( -85.3071, 95.6627 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -55,7 +54,36 @@ centered = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
 build_mode = 1
-polygon = PoolVector2Array( -1068.7, 553.035, -1088.86, 925.972, -1066.18, 1314.03, -829.315, 1598.77, -446.299, 1782.72, -282.509, 1787.76, -106.12, 1767.6, 4.75325, 1765.08, 183.662, 1767.6, 644.793, 1755, 932.055, 1757.52, 1143.72, 1744.92, 1657.77, 1724.76, 1922.35, 1681.92, 2219.69, 1679.4, 2466.64, 1674.36, 2935.33, 1654.21, 3048.72, 1666.81, 3162.12, 1649.17, 3368.74, 1596.25, 3419.14, 1596.25, 3756.8, 1467.74, 3892.87, 1366.94, 3915.55, 1064.56, 3890.35, 842.817, 3880.27, 739.503, 3362.95, 761.17, 3371.43, 922.208, 3189.2, 939.16, 3189.2, 795.073, 3041.16, 787.38, 3018.48, 1011.65, 2791.7, 1046.92, 2499.4, 1039.36, 2489.32, 772.261, 2345.69, 774.781, 2317.97, 890.694, 2166.78, 895.734, 2161.74, 774.781, 1987.87, 792.42, 1975.27, 981.408, 1836.68, 973.849, 1796.36, 893.214, 1793.84, 822.658, 1128.6, 802.499, 1110.96, 918.412, 962.293, 910.853, 944.654, 782.341, 327.293, 805.019, 334.853, 968.809, 433.127, 1140.16, 594.397, 1160.32, 743.067, 1087.24, 1105.92, 1079.68, 1194.12, 1162.84, 1191.6, 1329.15, 1083.25, 1417.34, 1037.89, 1571.05, 720.389, 1616.41, 634.714, 1591.21, 458.325, 1596.25, 118.146, 1497.98, 50.1107, 1427.42, 60.1901, 1296.39, 155.944, 1130.08, 140.825, 812.579, -269.909, 802.5, -312.747, 923.452, -468.977, 925.972, -506.774, 757.142 )
+polygon = PoolVector2Array( -1071.59, 645.989, -1088.86, 925.972, -1066.18, 1314.03, -829.315, 1598.77, -446.299, 1782.72, -282.509, 1787.76, -106.12, 1767.6, 4.75325, 1765.08, 183.662, 1767.6, 644.793, 1755, 932.055, 1757.52, 1143.72, 1744.92, 1657.77, 1724.76, 1922.35, 1681.92, 2219.69, 1679.4, 2466.64, 1674.36, 2935.33, 1654.21, 3048.72, 1666.81, 3162.12, 1649.17, 3368.74, 1596.25, 3419.14, 1596.25, 3756.8, 1467.74, 3892.87, 1366.94, 3915.55, 1064.56, 3890.35, 842.817, 3753.2, 751.935, 3376.03, 771.006, 3371.43, 922.208, 3189.2, 939.16, 3189.2, 795.073, 3041.16, 787.38, 3037, 987.136, 2835.71, 1016.8, 2649.24, 1048.59, 2499.4, 1039.36, 2505.15, 768.887, 2358.95, 768.887, 2317.97, 890.694, 2166.78, 895.734, 2168.24, 760.411, 2005.09, 783.719, 1975.27, 981.408, 1836.68, 973.849, 1796.36, 893.214, 1791.08, 792.195, 1553.76, 821.86, 1140.57, 787.957, 1110.96, 918.412, 962.293, 910.853, 944.654, 782.341, 907.484, 760.411, 668.045, 794.314, 428.606, 773.125, 327.293, 805.019, 334.853, 968.809, 433.127, 1140.16, 594.397, 1160.32, 743.067, 1087.24, 1105.92, 1079.68, 1194.12, 1162.84, 1191.6, 1329.15, 1083.25, 1417.34, 1037.89, 1571.05, 720.389, 1616.41, 634.714, 1591.21, 458.325, 1596.25, 118.146, 1497.98, 50.1107, 1427.42, 60.1901, 1296.39, 155.944, 1130.08, 140.825, 812.579, -204.952, 771.006, -302.423, 817.622, -302.423, 921.45, -468.977, 925.972, -480.413, 745.579, -810.965, 669.297 )
+
+[node name="CollisionPolygon2D2" type="CollisionShape2D" parent="Ground"]
+position = Vector2( -1334.92, 584.824 )
+scale = Vector2( 22.7132, 79.6073 )
+shape = SubResource( 1 )
+
+[node name="CollisionPolygon2D3" type="CollisionShape2D" parent="Ground"]
+position = Vector2( 4220.9, 737.386 )
+scale = Vector2( 22.7132, 79.6073 )
+shape = SubResource( 1 )
+
+[node name="StandardPlat1" parent="Ground" instance=ExtResource( 10 )]
+position = Vector2( 48.4671, 416.187 )
+
+[node name="StandardPlat2" parent="Ground" instance=ExtResource( 11 )]
+position = Vector2( -328.702, 553.918 )
+
+[node name="StandardPlat3" parent="Ground" instance=ExtResource( 10 )]
+position = Vector2( 2776.44, 810.586 )
+
+[node name="StandardPlat4" parent="Ground" instance=ExtResource( 14 )]
+position = Vector2( 2284.41, 452.184 )
+scale = Vector2( 0.54373, 0.604443 )
+
+[node name="StandardPlat5" parent="Ground" instance=ExtResource( 11 )]
+position = Vector2( 1884.91, 573.544 )
+
+[node name="StandardPlat6" parent="Ground" instance=ExtResource( 10 )]
+position = Vector2( 1247.42, 508.926 )
 
 [node name="leaves" type="Sprite" parent="."]
 position = Vector2( 434.995, 884.648 )
@@ -69,10 +97,27 @@ position = Vector2( -629.757, 584.517 )
 position = Vector2( -884.99, 423.738 )
 
 [node name="change_scene" parent="." instance=ExtResource( 8 )]
-position = Vector2( 3802.35, 420.796 )
+position = Vector2( 3865.57, 503.378 )
 next_scene = "res://src/AshLevels/Level 3.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
 autoplay = true
 bus = "Soundtrack"
+
+[node name="Lighting_Braziers" parent="." instance=ExtResource( 4 )]
+position = Vector2( 134.475, 308.892 )
+
+[node name="Lighting_Braziers2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1304.88, 369.3 )
+
+[node name="Lighting_Braziers3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2388.45, 312.668 )
+
+[node name="boulder0" parent="." instance=ExtResource( 13 )]
+position = Vector2( 726.506, 693.376 )
+scale = Vector2( 0.42373, 0.444444 )
+
+[node name="boulder1" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1553.01, 698.416 )
+scale = Vector2( 0.54373, 0.604443 )

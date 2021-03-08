@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://src/actors/water_player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway b.png" type="Texture" id=2]
@@ -9,6 +9,14 @@
 [ext_resource path="res://assets/graphics/livaroy/PNG/LVL4/LVL_4_groundplane.png" type="Texture" id=7]
 [ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/BG COLOUR.png" type="Texture" id=8]
 [ext_resource path="res://assets/audio/Soundtrack/Track_3.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/objects/moving_platforms.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/objects/boulders/boulder0.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/objects/water_button.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/objects/Lighting_Braziers.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/objects/lever.tscn" type="PackedScene" id=17]
 
 [node name="Level 0" type="Node2D"]
 
@@ -60,6 +68,24 @@ centered = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
 polygon = PoolVector2Array( -1145.06, 642.967, -449.062, 742.967, -537.062, 1062.97, -593.062, 1326.97, -317.062, 1586.97, 762.938, 1582.97, 862.938, 1378.97, 954.938, 878.967, 1274.94, 866.967, 1186.94, 1158.97, 1398.94, 1442.97, 2470.94, 1418.97, 2606.94, 1074.97, 2534.94, 814.967, 2822.94, 802.967, 3018.94, 902.967, 3210.94, 910.967, 3258.94, 1078.97, 3418.94, 1086.97, 3458.94, 926.967, 3566.94, 926.967, 3578.94, 1098.97, 3818.94, 1074.97, 3810.94, 910.967, 4146.94, 910.967, 4202.94, 1098.97, 4422.94, 1074.97, 4394.94, 910.967, 4714.94, 906.967, 4706.94, 1070.97, 4918.94, 1062.97, 4926.94, 926.967, 5154.94, 934.967, 5166.94, 1058.97, 5406.94, 1058.97, 5394.94, 910.967, 5766.94, 910.967, 5790.94, 1038.97, 5950.94, 1038.97, 5958.94, 854.967, 6318.94, 798.967, 6806.94, 802.967, 6638.94, 1234.97, 6302.94, 1526.97, 6006.94, 1562.97, 5730.94, 1602.97, 5302.94, 1642.97, 4778.94, 1702.97, 4582.94, 1702.97, 4394.94, 1726.97, 4330.94, 1722.97, 4190.94, 1730.97, 4014.94, 1730.97, 3874.94, 1734.97, 3666.94, 1734.97, 3550.94, 1734.97, 3258.94, 1730.97, 3154.94, 1730.97, 2850.94, 1734.97, 2682.94, 1722.97, 2446.94, 1718.97, 2398.94, 1714.97, 2206.94, 1698.97, 1562.94, 1746.97, 1346.94, 1702.97, 1230.94, 1698.97, 982.938, 1702.97, 862.938, 1702.97, 710.938, 1706.97, -485.062, 1750.97, -649.062, 1694.97, -857.062, 1574.97, -1013.06, 1418.97, -1053.06, 1270.97, -1089.06, 1014.97, -1117.06, 834.967 )
 
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Ground"]
+polygon = PoolVector2Array( -233.764, 735.102, -260.482, 907.328, -150.298, 970.896, 654.894, 983.61, 680.321, 856.474, 290.439, 826.809, 92.0787, 770.778 )
+
+[node name="StandardPlat1" parent="Ground/CollisionPolygon2D2" instance=ExtResource( 10 )]
+position = Vector2( 1906.52, 857.106 )
+
+[node name="StandardPlat5" parent="Ground/CollisionPolygon2D2" instance=ExtResource( 10 )]
+position = Vector2( 1906.52, 1252.66 )
+
+[node name="StandardPlat2" parent="Ground/CollisionPolygon2D2" instance=ExtResource( 11 )]
+position = Vector2( 3331.37, 654.288 )
+
+[node name="StandardPlat3" parent="Ground/CollisionPolygon2D2" instance=ExtResource( 11 )]
+position = Vector2( 3780.86, 651.291 )
+
+[node name="StandardPlat4" parent="Ground/CollisionPolygon2D2" instance=ExtResource( 11 )]
+position = Vector2( 4242.83, 643.103 )
+
 [node name="Atlea" parent="." instance=ExtResource( 1 )]
 position = Vector2( -544.057, 469.645 )
 
@@ -70,3 +96,60 @@ position = Vector2( -844.024, 441.967 )
 stream = ExtResource( 9 )
 autoplay = true
 bus = "Soundtrack"
+
+[node name="boulder0" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3149.04, 799.498 )
+scale = Vector2( 0.574197, 0.605993 )
+
+[node name="boulder1" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3589.04, 810.723 )
+scale = Vector2( 0.574197, 0.605993 )
+
+[node name="boulder2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 4073.95, 797.253 )
+scale = Vector2( 0.574197, 0.605993 )
+
+[node name="boulder3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 5663.35, 792.763 )
+scale = Vector2( 0.574197, 0.605993 )
+
+[node name="StandardPlat1" parent="." instance=ExtResource( 13 )]
+position = Vector2( 5077.37, 169.672 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 12 )]
+position = Vector2( 4656.41, 651.522 )
+
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2452.72, 1240.58 )
+scale = Vector2( 0.559998, 1 )
+
+[node name="KinematicBody2D3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1486.49, 1240.58 )
+scale = Vector2( 0.559998, 1 )
+
+[node name="button" parent="." instance=ExtResource( 15 )]
+position = Vector2( -282.963, 1319.71 )
+
+[node name="button2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 219.9, 1337.67 )
+
+[node name="button3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 704.803, 1324.2 )
+
+[node name="button4" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2195.52, 1155.06 )
+
+[node name="Lighting_Braziers" parent="." instance=ExtResource( 16 )]
+position = Vector2( 260.76, 643.194 )
+
+[node name="Lighting_Braziers2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 5057.77, 32.2538 )
+
+[node name="Lighting_Braziers3" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1957.82, 1124.03 )
+
+[node name="lever" parent="." instance=ExtResource( 17 )]
+position = Vector2( 525.368, 775.656 )
+
+[node name="lever2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2125.56, 781.649 )

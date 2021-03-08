@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://src/actors/water_player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway b.png" type="Texture" id=2]
@@ -8,6 +8,13 @@
 [ext_resource path="res://src/actors/robot_player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/graphics/livaroy/PNG/LVL3/lvl_3_bg.png" type="Texture" id=7]
 [ext_resource path="res://assets/audio/Soundtrack/Track_3.ogg" type="AudioStream" id=8]
+[ext_resource path="res://src/objects/boulders/boulder0.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/objects/moving_platforms.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/objects/Lighting_Braziers.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/objects/lever.tscn" type="PackedScene" id=15]
 
 [node name="Level 0" type="Node2D"]
 
@@ -45,7 +52,69 @@ texture = ExtResource( 4 )
 centered = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ground"]
-polygon = PoolVector2Array( -1118.63, 690.411, -1092.2, 932.043, 595.448, 966.023, 2841.87, 966.023, 3982.07, 950.921, 4072.68, 1169.9, 4623.9, 1192.55, 4676.76, 916.941, 5197.78, 894.288, 5269.51, 720.615, 4586.15, 796.125, 4491.76, 1022.66, 4140.64, 1007.55, 4023.6, 792.35, 2830.54, 822.554, 561.469, 818.778 )
+polygon = PoolVector2Array( -1118.63, 690.411, -1092.2, 932.043, 595.448, 966.023, 2841.87, 966.023, 3982.07, 950.921, 4072.68, 1169.9, 4623.9, 1192.55, 4676.76, 916.941, 5197.78, 894.288, 5269.51, 720.615, 4597.55, 760.632, 4513.8, 830.122, 4491.76, 1022.66, 4140.64, 1007.55, 4023.6, 792.35, 2830.54, 822.554, 561.469, 818.778 )
+
+[node name="StandardPlat4" parent="Ground" instance=ExtResource( 14 )]
+position = Vector2( 3525.65, 23.4999 )
+
+[node name="StandardPlat5" parent="Ground" instance=ExtResource( 13 )]
+position = Vector2( 4748.27, 32.4899 )
+
+[node name="StandardPlat1" parent="Ground" instance=ExtResource( 10 )]
+position = Vector2( 131.444, 222.18 )
+
+[node name="StandardPlat2" parent="Ground" instance=ExtResource( 10 )]
+position = Vector2( 2026, 323.042 )
+
+[node name="StandardPlat3" parent="Ground" instance=ExtResource( 10 )]
+position = Vector2( 2045.09, -104.103 )
+
+[node name="Interactables" type="Node2D" parent="."]
+position = Vector2( 343.895, 734.833 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="lever" parent="Interactables" instance=ExtResource( 15 )]
+scale = Vector2( 1, 1 )
+
+[node name="lever2" parent="Interactables" instance=ExtResource( 15 )]
+position = Vector2( 3607.92, 47.9465 )
+scale = Vector2( 1, 1 )
+
+[node name="KinematicBody2D" parent="Interactables" instance=ExtResource( 11 )]
+position = Vector2( 4641.13, -1534.48 )
+scale = Vector2( 4, 4 )
+
+[node name="KinematicBody2D5" parent="Interactables" instance=ExtResource( 11 )]
+position = Vector2( 11245.7, -1450.58 )
+scale = Vector2( 4, 4 )
+
+[node name="KinematicBody2D2" parent="Interactables" instance=ExtResource( 11 )]
+position = Vector2( 9453.02, -3353.93 )
+scale = Vector2( 4, 4 )
+
+[node name="KinematicBody2D3" parent="Interactables" instance=ExtResource( 11 )]
+position = Vector2( 16453.1, -1627.88 )
+scale = Vector2( 4, 4 )
+
+[node name="KinematicBody2D4" parent="Interactables" instance=ExtResource( 11 )]
+position = Vector2( 14631.2, -3737.5 )
+scale = Vector2( 4, 4 )
+
+[node name="Lighting_Braziers" parent="Interactables" instance=ExtResource( 12 )]
+position = Vector2( 7060.02, -3991.5 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Lighting_Braziers2" parent="Interactables" instance=ExtResource( 12 )]
+position = Vector2( 17847.8, -3392.17 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Lighting_Braziers3" parent="Interactables" instance=ExtResource( 12 )]
+position = Vector2( -1066.8, -2541.13 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="boulder0" parent="Interactables" instance=ExtResource( 9 )]
+position = Vector2( 2285.71, -318.799 )
+scale = Vector2( 4, 4 )
 
 [node name="Atlea" parent="." instance=ExtResource( 1 )]
 position = Vector2( -690.995, 591.769 )
@@ -54,7 +123,7 @@ position = Vector2( -690.995, 591.769 )
 position = Vector2( -381.355, 571.252 )
 
 [node name="change_scene" parent="." instance=ExtResource( 5 )]
-position = Vector2( 5177.92, 417.837 )
+position = Vector2( 5345.73, 477.769 )
 next_scene = "res://src/AshLevels/Level 4.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
