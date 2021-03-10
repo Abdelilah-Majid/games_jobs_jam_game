@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://src/actors/water_player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/graphics/livaroy/PNG/LEVEL 2/level__2_groundplane.png" type="Texture" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://src/actors/robot_player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/BG COLOUR.png" type="Texture" id=7]
 [ext_resource path="res://src/objects/change_scene.tscn" type="PackedScene" id=8]
-[ext_resource path="res://assets/audio/Soundtrack/Track_2.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/AshLevels/Level 2.gd" type="Script" id=9]
 [ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform3.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform2.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/objects/water_button.tscn" type="PackedScene" id=12]
@@ -17,7 +17,11 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2567.34, 884.793 )
+
 [node name="Level 0" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -100,11 +104,6 @@ position = Vector2( -884.99, 423.738 )
 position = Vector2( 3865.57, 503.378 )
 next_scene = "res://src/AshLevels/Level 3.tscn"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
-autoplay = true
-bus = "Soundtrack"
-
 [node name="Lighting_Braziers" parent="." instance=ExtResource( 4 )]
 position = Vector2( 134.475, 308.892 )
 
@@ -121,3 +120,10 @@ scale = Vector2( 0.42373, 0.444444 )
 [node name="boulder1" parent="." instance=ExtResource( 13 )]
 position = Vector2( 1553.01, 698.416 )
 scale = Vector2( 0.54373, 0.604443 )
+
+[node name="Soundtrack_lvl2" type="Area2D" parent="."]
+
+[node name="soundtrack" type="CollisionShape2D" parent="Soundtrack_lvl2"]
+position = Vector2( 1521.69, 814.587 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="Soundtrack_lvl2" to="." method="_on_Soundtrack_lvl2_body_entered"]

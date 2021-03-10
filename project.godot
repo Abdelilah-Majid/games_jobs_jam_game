@@ -34,6 +34,7 @@ config/icon="res://assets/graphics/livaroy/PNG/HUD/ATLEA_title.png"
 
 global_water_player_script="*res://src/code/global_scripts/global_water_player_script.gd"
 global_players_script="*res://src/code/global_scripts/global_players_script.gd"
+MusicController="*res://autoloads/MusicController.tscn"
 
 [display]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/actors/water_player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/graphics/livaroy/PNG/DECORATIONS AND PROPS/walkway b.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://src/objects/change_scene.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/actors/robot_player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/graphics/livaroy/PNG/LVL3/lvl_3_bg.png" type="Texture" id=7]
-[ext_resource path="res://assets/audio/Soundtrack/Track_3.ogg" type="AudioStream" id=8]
 [ext_resource path="res://src/objects/boulders/boulder0.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/objects/moving_platforms.tscn" type="PackedScene" id=11]
@@ -125,8 +124,3 @@ position = Vector2( -381.355, 571.252 )
 [node name="change_scene" parent="." instance=ExtResource( 5 )]
 position = Vector2( 5345.73, 477.769 )
 next_scene = "res://src/AshLevels/Level 4.tscn"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
-autoplay = true
-bus = "Soundtrack"

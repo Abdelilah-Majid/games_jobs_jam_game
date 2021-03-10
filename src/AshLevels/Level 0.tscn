@@ -9,7 +9,7 @@
 [ext_resource path="res://src/actors/robot_player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/objects/boulders/boulder0.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/objects/change_scene.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/audio/Soundtrack/Track_2.ogg" type="AudioStream" id=10]
+[ext_resource path="res://src/AshLevels/Level 0.gd" type="Script" id=10]
 [ext_resource path="res://assets/graphics/livaroy/PNG/INTRO LEVEL/BG COLOUR.png" type="Texture" id=11]
 [ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://src/platforms/Lv1_Norm_Platforms/Platform3.tscn" type="PackedScene" id=13]
@@ -22,6 +22,7 @@
 extents = Vector2( 138.535, 1051.77 )
 
 [node name="Level 0" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -129,8 +130,3 @@ position = Vector2( 2283.33, 1104.81 )
 [node name="boulder0" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1634.27, 1110.28 )
 scale = Vector2( 1, 0.864 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
-autoplay = true
-bus = "Soundtrack"
